@@ -1,0 +1,11 @@
+<h1>All Auctions</h1><hr>
+
+<h3>Add an auction</h3>
+<%= render 'form' %><hr>
+
+<% @auctions.each do |a| %>
+  <h2><%= link_to a.title, auction_path(a) %></h2>
+  <p><%= a.details %></p>
+  <p><%= link_to "Edit", edit_auction_path(a) %></p>
+  <p><%= link_to "Delete", auction_path(a), method: :delete, data: {confirm: "Are you sure?"} %></p>
+<% end %>

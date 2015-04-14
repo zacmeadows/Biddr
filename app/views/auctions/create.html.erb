@@ -1,0 +1,23 @@
+<!-- <%# if @auction.errors.any? %>
+  <ul>
+    <%# @auction.errors.full_messages.each do |msg| %>
+      <li><%#= msg %></li>
+    <%# end %>
+  </ul>
+<%# end %> -->
+
+<%= form_for @auction do |f| %> 
+  <%= f.label :title %> 
+  <%= f.text_field :title %> 
+  <br>
+  <%= f.label :details %> 
+  <%= f.text_area :details %>
+  <br> 
+  <%= f.label :price %> 
+  <%= f.text_area :price %>
+  <br> 
+  <%= f.label :date %> 
+  <%= f.text_field :date, placeholder: "yyyy-mm-dd" %>
+  <br>
+  <%= f.submit "Create" %> 
+<% end %>

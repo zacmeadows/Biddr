@@ -1,0 +1,10 @@
+<h2><%= @auction.title %></h2>
+<p><%= @auction.details %></p>
+<p><%= @auction.price %></p>
+<p><%= @auction.date %></p><hr>
+
+<%= render '/bids/form' %><br><br><br>
+
+<% @auction.bids.each do |b| %>
+  <li><%= b.bid_price %></li>
+<% end %>

@@ -1,0 +1,5 @@
+<%= form_for [@auction, @bid] do |f| %>
+  <%= f.label :bid_price %>
+  <%= f.text_field :bid_price %>
+  <%= f.submit %>
+<% end %>
